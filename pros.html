@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FormWizard_v7</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form action="" id="wizard">
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="images/form-wizard-1.jpg" alt="">
+						</div>
+						<div class="form-content">
+							<div class="form-inner">
+								<div class="form-header">
+									<h3>Find a Book</h3>
+									<p>~ Fill the Form ~</p>
+								</div>
+								<div class="form-row" style="margin-bottom: 31px;">
+									<label for="">
+										Category
+									</label>
+									<div class="select">
+										<div class="form-holder">
+											<div class="select-control"></div>
+											<i class="zmdi zmdi-chevron-down"></i>
+										</div>
+										<ul class="dropdown">
+											<li rel="Science">Science</li>
+											<li rel="Romance">Romance</li>
+											<li rel="Theatrical Plays">Theatrical Plays</li>
+											<li rel="Biographies">Biographies</li>
+											<li rel="Other">Other</li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-row" style="margin-bottom: 31px;">
+								
+									<input type='text' class='datepicker-here form-control' data-language='en' id="dp" data-date-format=" yyyy"/>
+                                </div>
+                                
+                                <div class="form-row" style="margin-bottom: 31px;" >
+                                    <label for="">
+                                        Book Size
+                                    </label>
+                                    <div class="select2">
+                                        <div class="form-holder">
+                                            <div class="select-control"></div>
+                                            <i class="zmdi zmdi-chevron-down"></i>
+                                        </div>
+                                        <ul class="dropdown">
+                                            <li rel="1 - 200 pages">1 - 200 pages</li>
+                                            <li rel="200 - 500 pages">200 - 500 pages</li>
+                                            <li rel="500 and up">500 and up</li>
+                                            <li rel="No preference">No Preference</li>
+                                        </ul>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+                </section>
+
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+     				<div class="inner">
+						<div class="image-holder">
+							<img src="images/form-wizard-2.jpg" alt="">
+						</div>
+						<div class="form-content">
+							<div class="form-inner">
+								<div class="form-header">
+									<h3>Find a Book</h3>
+									<p>~ Fill the Form ~</p>
+								</div>
+								<div class="form-row">
+									<label for="">
+										Year of Publication
+									</label>
+									<input type="text" class="form-control" placeholder="Year">
+								</div>
+
+                                <div class="form-row" style="margin-bottom: 31px;">
+                                    <label for="">
+                                        Text Language
+                                    </label>
+                                    <div class="select3">
+                                        <div class="form-holder">
+                                            <div class="select-control"></div>
+                                            <i class="zmdi zmdi-chevron-down"></i>
+                                        </div>
+                                        <ul class="dropdown">
+                                            <li rel="Greek">Greek</li>
+                                            <li rel="English">English</li>
+                                        </ul>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="images/form-wizard-3.jpg" alt="">
+						</div>
+						<div class="form-content">
+							<div class="form-inner form-inner-last">
+								<div class="ready">
+									<p class="text-1">Your books are ready</p>
+									<p class="text-2">~ Have a nice reading ~</p>
+									<ul role="menu" aria-label="Pagination">
+										
+										<a href="index.html" role="menuitem" class="button">
+											Try again
+										</a><br>
+										<a href="https://opac.seab.gr/search~S11*gre" role="menuitem" class="button" >
+												Search book in Library of Thessaly.
+										</a>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+                </section>
+			</form>
+			<button class="open-button" onclick="openForm()">Login Form</button>
+			<div class="form-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+					<h1>Login</h1>
+					  
+					<label for="email"><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+					  
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+					  
+					<button type="submit" class="btn">Login</button>
+					<button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+			<button class="open-button2" onclick="openForm2()">Signup Form</button>
+			<div class="form-popup2" id="myForm2">
+				<form action="/action_page.php" class="form-container">
+					<h1>Signup</h1>
+					  
+					<label for="email"><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+					  
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<label for="psw2"><b>Re-type Password</b></label>
+					<input type="password" placeholder="Retype password" name="psw2" required>
+					  
+					<button type="submit" class="btn">Signup</button>
+					<button type="submit" class="btn cancel" onclick="closeForm2()">Close</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="vendor/date-picker/js/datepicker.js"></script>
+		<script src="vendor/date-picker/js/datepicker.en.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="js/jquery.steps.js"></script>
+
+		<script src="js/main.js"></script>
+		<script>
+			function openForm() {
+			  document.getElementById("myForm").style.display = "block";
+			}
+			
+			function closeForm() {
+			  document.getElementById("myForm").style.display = "none";
+			}
+		</script>	
+		<script>
+				function openForm2() {
+				document.getElementById("myForm2").style.display = "block";
+				}
+				
+				function closeForm2() {
+				document.getElementById("myForm2").style.display = "none";
+				}
+		</script>
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
